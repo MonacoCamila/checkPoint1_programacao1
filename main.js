@@ -3,6 +3,7 @@ function microondas (segundos, comida){
     const brigadeiroTime = 8;
     const feijaoTime = 12;
     const carneTime = 15;
+    const macarraoTime = 8;
 
    
     if(comida==="pipoca" && segundos===pipocaTime){
@@ -35,6 +36,16 @@ function microondas (segundos, comida){
         return console.log("tempo insuficiente");
     }
 
+    if(comida==="macarrao" && segundos===macarraoTime){
+        return console.log("Prato pronto, bom apetite!");
+    } else if(comida==="macarrao" && segundos>=macarraoTime*3){
+        return console.log("Kabum");
+    }else if(comida==="macarrao" && segundos>=macarraoTime*2){
+        return console.log("a comida queimou");
+    }else if(comida==="macarrao" && segundos<macarraoTime){
+        return console.log("tempo insuficiente");
+    }
+
     if(comida==="carne" && segundos===carneTime){
         return console.log("Prato pronto, bom apetite!");
     } else if(comida==="carne" && segundos>=carneTime*3){
@@ -47,4 +58,4 @@ function microondas (segundos, comida){
     
 }
 
-microondas(5, "carne");
+microondas(90, "macarrao");
