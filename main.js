@@ -62,4 +62,4 @@ function microondas(segundos, comida) {
 
 }
 
-microondas(90, "sushi");
+microondas(30, "pipoca");
